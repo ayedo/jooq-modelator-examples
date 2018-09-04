@@ -14,7 +14,7 @@ jooqModelator {
     jooqVersion = '3.11.4'
     jooqEdition = 'OSS'
     jooqConfigPath = 'src/main/resources/jooqConfiguration.xml'
-    migrationEngine = 'FLYWAY'
+    migrationEngine = 'LIQUIBASE'
     migrationsPath = 'src/main/resources/migrations'
     dockerTag = 'mariadb:10.2'
     dockerEnv = ['MYSQL_DATABASE=maria', 'MYSQL_ROOT_PASSWORD=pass', 'MYSQL_PASSWORD=pass']
