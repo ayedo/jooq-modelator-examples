@@ -1,0 +1,35 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.2.61'
+    id 'ch.ayedo.jooqmodelator' version '1.0.0'
+}
+
+group 'ch.ayedo'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+jooqModelator {
+    jooqVersion = '3.11.4'
+    jooqEdition = 'OSS'
+    jooqConfigPath = 'src/main/resources/jooqConfiguration.xml'
+    migrationEngine = 'FLYWAY'
+    migrationsPath = 'src/main/resources/migrations'
+    dockerTag = 'postgres:9.5'
+    dockerEnv = ['POSTGRES_DB=postgres', 'POSTGRES_USER=postgres', 'POSTGRES_PASSWORD=secret']
+    dockerHostPort = 5432
+    dockerContainerPort = 5432
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    jooqModelatorRuntime('org.postgresql:postgresql:42.2.4')
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
