@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <configuration>
     <jdbc>
-        <driver>org.postgresql.Driver</driver>
-        <url>jdbc:postgresql://localhost:5432/postgres?loggerLevel=OFF</url>
-        <user>postgres</user>
-        <password>secret</password>
+        <driver>org.mariadb.jdbc.Driver</driver>
+        <url>jdbc:mariadb://localhost:3306/maria</url>
+        <user>root</user>
+        <password>pass</password>
     </jdbc>
     <generator>
         <database>
-            <name>org.jooq.meta.postgres.PostgresDatabase</name>
-            <inputSchema>public</inputSchema>
+            <name>org.jooq.meta.mariadb.MariaDBDatabase</name>
         </database>
         <target>
-            <packageName>ch.ayedo.jooqmodelator</packageName>
+            <packageName>ch.ayedo.jooqmodelator.test</packageName>
             <directory>src/main/java</directory>
         </target>
     </generator>

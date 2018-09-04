@@ -16,15 +16,15 @@ jooqModelator {
     jooqConfigPath = 'src/main/resources/jooqConfiguration.xml'
     migrationEngine = 'FLYWAY'
     migrationsPath = 'src/main/resources/migrations'
-    dockerTag = 'postgres:9.5'
-    dockerEnv = ['POSTGRES_DB=postgres', 'POSTGRES_USER=postgres', 'POSTGRES_PASSWORD=secret']
-    dockerHostPort = 5432
-    dockerContainerPort = 5432
+    dockerTag = 'mariadb:10.2'
+    dockerEnv = ['MYSQL_DATABASE=maria', 'MYSQL_ROOT_PASSWORD=pass', 'MYSQL_PASSWORD=pass']
+    dockerHostPort = 3306
+    dockerContainerPort = 3306
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    jooqModelatorRuntime('org.postgresql:postgresql:42.2.4')
+    jooqModelatorRuntime('org.mariadb.jdbc:mariadb-java-client:2.2.6')
 }
 
 compileKotlin {
