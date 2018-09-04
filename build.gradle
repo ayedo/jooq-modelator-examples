@@ -14,7 +14,7 @@ jooqModelator {
     jooqVersion = '3.11.4'
     jooqEdition = 'OSS'
     jooqConfigPath = 'src/main/resources/jooqConfiguration.xml'
-    migrationEngine = 'FLYWAY'
+    migrationEngine = 'LIQUIBASE'
     migrationsPath = 'src/main/resources/migrations'
     dockerTag = 'postgres:9.5'
     dockerEnv = ['POSTGRES_DB=postgres', 'POSTGRES_USER=postgres', 'POSTGRES_PASSWORD=secret']
