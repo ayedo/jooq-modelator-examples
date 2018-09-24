@@ -14,7 +14,7 @@ jooqModelator {
     jooqVersion = '3.11.4'
     jooqEdition = 'OSS'
     jooqConfigPath = 'src/main/resources/jooqConfiguration.xml'
-    jooqOutputPath = 'src/main/java/ch/ayedo/jooqmodelator/test'
+    jooqOutputPath = 'src/main/java/ch/ayedo/jooqmodelator'
     migrationEngine = 'FLYWAY'
     migrationsPath = 'src/main/resources/migrations'
     dockerTag = 'postgres:9.5'
