@@ -1,6 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.2.61'
-    id 'ch.ayedo.jooqmodelator' version '2.0.1'
+    id 'ch.ayedo.jooqmodelator' version '2.0.2'
 }
 
 group 'ch.ayedo'
